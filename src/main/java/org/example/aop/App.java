@@ -11,7 +11,8 @@ public class App {
         SchoolLibrary schoolLibrary = context.getBean("schoolLibrary",
                 SchoolLibrary.class);
         library.getBook();
-       library.getMagazine();
+       library.returnMagazine();
+       library.addBook();
         //library.returnBook();
         //schoolLibrary.getBook();
         context.close();

@@ -17,4 +17,16 @@ public class UniLibrary extends AbstractLibrary {
 
         System.out.println("Мы берем журнал из Unilibrary");
     }
+
+    public void returnMagazine() {
+        System.out.println("Мы возвращаем журнал в unilibrary");
+    }
+
+    public void addBook() {
+        System.out.println("Мы добавляем книгу в unilibrary");
+    }
+
+    public void addMagazine() {
+        System.out.println("Мы добавляем журнал в unilibrary");
+    }
  }
