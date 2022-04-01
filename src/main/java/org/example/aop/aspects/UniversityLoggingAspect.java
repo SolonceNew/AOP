@@ -15,13 +15,19 @@ public class UniversityLoggingAspect {
                 "списка студентов перед методом getStudents");
     }
 
-    @AfterThrowing(pointcut = "execution(* getStudents())"
-    , throwing = "exception")
-    // получаем информацию об эксепшине. который выбрасывается
-    public void afterThrowingGetStudentsLoggingAdvice(Throwable exception) {
-        System.out.println("afterThrowingGetStudentsLoggingAdvice: логируем выброс " +
-                "исключения" + exception);
+    @After("execution(* getStudents())")
+    public void afterGetStudentsLiggingAdvice() {
+        System.out.println("afterGetStudentsLiggingAdvice(): логируем нормальное завершение" +
+                " работы программы или выброс с исключением");
     }
+
+   // @AfterThrowing(pointcut = "execution(* getStudents())"
+   // , throwing = "exception")
+    // получаем информацию об эксепшине. который выбрасывается
+   // public void afterThrowingGetStudentsLoggingAdvice(Throwable exception) {
+   //     System.out.println("afterThrowingGetStudentsLoggingAdvice: логируем выброс " +
+   //             "исключения" + exception);
+   // }
 
  //   @AfterReturning(pointcut = "execution(* getStudents())"
  //   , returning = "students")
